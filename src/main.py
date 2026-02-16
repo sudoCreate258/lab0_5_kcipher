@@ -1,7 +1,9 @@
-from my_functions import get_plaintext, check_equals
+from my_functions import get_plaintext, check_equals, get_alpha_lst
 # DO NOT UPDATE CODE ABOVE THIS LINE
 
 #TODO: (Input)   Assign data to the variables.
+alpha_lst = get_alpha_lst()
+
 #TODO: (Process) Manipulate the string.
 #TODO: (Output)  Display the asserted cipher text.
 
