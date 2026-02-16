@@ -10,5 +10,6 @@ alpha_lst = get_alpha_lst()
 '''
 # Ready for the extra credit?
 
+exp, act = 'DEF', 'ABC'
 assert check_equals(exp,act,False), "this should fail"
 '''
