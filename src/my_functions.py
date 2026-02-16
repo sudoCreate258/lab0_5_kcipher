@@ -1,11 +1,15 @@
 # DO NOT UPDATE ANY CODE BELOW THIS LINE
 import random as rand
 
+def get_alpha_lst():
+    ascii_A = 65
+    alst = [chr(x) for x in range(ascii_A, ascii_A+26)]
+    return alst
+
 def get_plaintext():
     def fn():
         seed = rand.randint(-25,25)
-        ascii_A = 65
-        alst = [chr(x) for x in range(ascii_A, ascii_A+26)]
+        alst = get_alpha_lst()
         return alst[seed]
     return f"{fn()}{fn()}{fn()}"
     
