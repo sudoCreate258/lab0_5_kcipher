@@ -15,8 +15,11 @@ def get_plaintext():
     
 def check_equals(ptext,ctext,flag=True):
     if flag:
-        exp = ''.join([chr(ord(p)-3) for p in ptext])
-        dxp = ''.join([chr(ord(p)+3) for p in exp])
+        ascii_A = 65
+        alst = [chr(x) for x in range(ascii_A, ascii_A+26)]
+        
+        exp = ''.join(alst[alst.index(p)-3] for p in ptext)
+        dxp = ''.join(alst[ (alst.index(p)+3) % len(alst) ] for p in exp)
     else:
         exp = ''.join([chr(ord(p)*3) for p in ptext])
         dxp = ''.join([chr(int(ord(p)/3)) for p in exp])
